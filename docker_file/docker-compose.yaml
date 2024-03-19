@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  # JupyterLab with PySpark
+  pyspark:
+    image: jupyter/pyspark-notebook:latest
+    container_name: pyspark-container
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    ports:
+      - "9999:8888"
+    volumes:
+      - C:/Users/phil/Desktop/fiap:/tmp/arquivos-fiap
+    networks:
+      - FIAP
+
+networks:
+  FIAP:
+    external: true
