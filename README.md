@@ -45,3 +45,7 @@ networks:
 ```
 
 Feito isso, acesso o container, pegue o token do notebook e use o jupyter no navegador.
+
+Para testar a conexão com o banco de dados utilize o Dbeaver (ou outro software de sua preferência). Em **Server Host** coloque **localhost**, **user** coloque **root** e **senha** coloque **hoot**. Com isso você poderá executar queries no banco MySQL.
+
+Para este projeto foram utilizados os dados de ** cnaes**, ** empresas** e ** estabelecimentos** do site [Dados Abertos]( https://dados.gov.br/dados/conjuntos-dados/cadastro-nacional-da-pessoa-juridica---cnpj). A organização das pastas já está no git dentro de **dados**. Para reproduzir esse projeto (caso queira), basta baixar esses arquivos no site, colocar em suas respectivas pastas, extrair e deixar na pasta **csv**, não precisa converter para o formato csv pois o script já faz isso.
