@@ -20,7 +20,7 @@ Criei um banco MySQL para poder praticar a escrita de dados com pyspark. Abaixo 
 docker run --name mysql-FIAP -e MYSQL_ROOT_PASSWORD=root -p 3307:3306 -d --network=FIAP mysql
 ```
 
-Esse comando fara o download de uma imagem MySQL e criara um container de nome mysql-FIAP. Seu computador passara a se comunicar a partir da porta local 3307 com o Docker na porta 3306 e o colocara na network FIAP. Também será criado um usuário de nome root com a senha root, esses parâmetros podem ser alterados.
+Esse comando fara o download de uma imagem MySQL e criara um container de nome mysql-FIAP. Seu computador passara a se comunicar a partir da porta local **3307** com o Docker na porta **3306** e o colocara na network FIAP. Também será criado um usuário de nome root com a senha root, esses parâmetros podem ser alterados.
 
 ### 3 - Criando Container Pyspark
 Acesse a pasta docker_file com o terminal, dentro dela tem o arquivo docker-compose.yaml (peguei esse arquivo no [LINK](https://github.com/ibqn/pyspark-jupyter/blob/master/docker-compose.yaml)), dentro desse arquivo tem um parâmetro chamado **volume**, optei por apontar para uma pasta na minha maquina local, com isso o Docker consegue consumir os arquivos que eu disponibilizar nessa pasta e a reconhece internamente como **/tmp/arquivos-fiap**, altere para a pasta que desejar, ou use os volumes do Docker se preferir.
@@ -31,7 +31,7 @@ Execute o seguinte comando no terminal.
 docker-compose -p pyspark_fiap up -d
 ```
 
-Com isso será realizado o download de todas as dependências para rodar o pyspark e criara um container de nome **pyspark_fiap** com jupyter notebook na portal local 9999 e no Docker na porta 8888, além coloca-los na network FIAP.
+Com isso será realizado o download de todas as dependências para rodar o pyspark e criara um container de nome **pyspark_fiap** com jupyter notebook na portal local **9999** e no Docker na porta **8888**, além coloca-los na network FIAP.
 
 Caso tenha optado por outro nome de network, altere esse parâmetro no arquivo yaml
 
